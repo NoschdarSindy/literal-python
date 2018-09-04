@@ -32,9 +32,7 @@ class Snake():
 		s.hungry = True
 		
 	def ateFood(self, food):
-		print(food, ' is not equal to ', self.pos)
 		if food == self.pos:
-			print("HÄÄÄÄÄÄÄÄÄ")
 			return True
 		return False
 				
