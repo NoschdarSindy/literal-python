@@ -12,7 +12,7 @@ d = 10 #make the smallest dimensional unit used in the game equal to 10 px
 dirs = { "up": (0, -d), "down": (0, d), "left": (-d, 0), "right": (d, 0) } #direction vectors
 
 class Snake():
-	"""Lay out a 3 r long snake in the middle of the screen, facing right"""
+	"""Lay out a 3 d long snake in the middle of the screen, facing right"""
 	def __init__(self):
 		self.pos = (w//2, h//2)
 		self.path = [(self.pos[0] - i * d, self.pos[1]) for i in range(3)]
@@ -23,7 +23,7 @@ class Snake():
 	def chDir(self, dir):
 		self.dir = dir
 	
-	"""Move forward by 1 r"""
+	"""Move forward by 1 d"""
 	def fwd(self):
 		if s.hungry: self.path.pop()
 		#add the current position and the current direction to calculate the new position
